@@ -1,8 +1,8 @@
 
 body {
     margin-top: 120px;
-
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* 'Trebuchet MS', */
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 1.75rem;
     font-weight: 950;
     color: whitesmoke;
@@ -25,7 +25,6 @@ h1 {
 button {
     display: block;
     margin: 10px auto;
-    
     font-size: 1.4rem;
     font-weight: 800;
     color: #016f32;
@@ -34,4 +33,9 @@ button {
     border: none;
     border-radius: 5px;
     background-color: goldenrod;
+}
+
+button:hover {
+    background-color: rgb(243, 198, 84);
+    border: 2px solid goldenrod;
 }
