@@ -28,7 +28,12 @@ function startGame() {
 };
 
 function renderGame() {
-    cardsEl.textContent = `Cards: ${allCurrentCards.toString()}`;
+    cardsEl.textContent = `Cards:`;
+
+    allCurrentCards.forEach( (card) => {
+        cardsEl.textContent += ` ${card}`;
+    });
+
     sumEl.textContent = `Sum: ${sum}`;
 
     if (sum < 21) {
@@ -44,7 +49,6 @@ function renderGame() {
 };
 
 function newCard() {
-    //console.log("Drawing a new card from the deck!");
     let card = randomCard();
     sum += card;
     allCurrentCards.push(card);
@@ -53,6 +57,4 @@ function newCard() {
 
 startButtonEl.addEventListener("click", startGame);
 newCardButtonEl.addEventListener("click", newCard);
-
-
 
