@@ -23,6 +23,7 @@ let sumEl = document.querySelector("#sum-el");
 let newCardButtonEl = document.querySelector("#newcard-button");
 
 function startGame() {
+    if (!isAlive) {
     isAlive = true;
     hasBlackJack = false;
 
@@ -32,7 +33,9 @@ function startGame() {
     sum = firstCard + secondCard;
    
     renderGame();
-    
+    } else if (isAlive) {
+        messageEl.textContent = "Game already in progress!"
+    }
 };
 
 function renderGame() {
