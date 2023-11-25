@@ -1,3 +1,8 @@
+//sometimes when blackjack is hit, upon pressing 'new card' 
+//and then 'start game' the game again says "you\ve got bj"
+//instead of immediately starting new game
+
+
 let hasBlackJack = false;
 let isAlive = false;
 let sum = 0;
@@ -53,12 +58,12 @@ function renderGame() {
         } else if (sum === 21) {
             message = "Wooooohoo! You've got Blackjack bebe!";
             hasBlackJack = true;
-            isAlive = false;//test
+            isAlive = false;
         } else { 
             message = "You're out of the game!";
             isAlive = false;
         };
-        
+
         messageEl.textContent = message;
 };
 
